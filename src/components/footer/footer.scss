@@ -1,0 +1,90 @@
+.footer{
+    height: 90vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .scroll{
+        color: white;
+        position: absolute;
+        left: 0%;
+        font-size: 0.9em;
+        font-style: bold;
+        font-weight: 100;
+        transform: translate(-50%, -50%);
+        text-orientation: mixed;
+        white-space: nowrap;
+        -moz-transform: rotate(270deg);  /* FF3.5+ */
+        -o-transform: rotate(270deg);  /* Opera 10.5 */
+        -webkit-transform: rotate(-90deg); /* Chrome, Saf3.1+*/
+
+      }
+   
+    .footerWrapper{
+        width: 80%;
+        height: 80%;
+        background-color: rgb(34, 34, 34);
+        display: flex;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+
+        .footerLeft{
+            font-size: 1.4em;
+            color: white;
+            
+            .btnOne{
+                position: relative;
+                
+
+                a{
+                    font-size: 0.5em;
+                    font-weight: 600;
+                    color: white;
+                    text-decoration: none;
+                    padding: 1em 2.4em;
+                    text-transform: uppercase;
+                    background-color: rgba(153, 153, 153, 0.274);
+                    opacity: 0.6;
+                    cursor: pointer;
+                    
+                    animation: float 4s ease-in-out infinite;
+
+                    @keyframes float {
+                        0% {
+                            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                            transform: translatey(0px);
+                        }
+                        50% {
+                            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+                            transform: translatey(-20px);
+                        }
+                        100% {
+                            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                            transform: translatey(0px);
+                        }
+                    }
+
+                }
+            }
+
+           
+        }
+
+
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+    .footer{
+        height: 60vh;
+        // padding: 10em 0 10em 0;
+        font-size: 50%;
+        .scroll{
+            display: none !important;
+        }
+    }
+}

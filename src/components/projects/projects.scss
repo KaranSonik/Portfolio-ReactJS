@@ -1,0 +1,177 @@
+.projects{
+
+    height: auto;
+    display: flex;
+    background-color: #222;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    h1{
+        text-align: center;
+        font-size: 2.3em;
+        margin-top: 1em;
+        color: #bcb4b4;
+        margin-bottom: 0;
+    }
+
+    .projectWrapper{
+        display: flex;
+        gap: 3rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin: 0em 10em 0 10em;
+
+       
+        .swiper-container{
+            display: flex;
+            padding-top: 6em;
+            justify-content: center;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+
+            .swiper-wrapper{
+
+                flex-direction: row;
+                align-items: center;
+
+            }
+            
+            .swiper-button-next, .swiper-button-prev{
+                position: absolute;
+                height: 70px;
+                width: 60px;
+                left: auto;
+                right: 100px;
+                background-color: #262626;
+                border-radius: 15px;
+                z-index: 10;
+                top: 0;
+                transform: translateY(60%);
+                color: white;
+            }
+            .swiper-button-next {
+                right: 35px;
+              }
+
+            .swiper-button-prev::after,
+            .swiper-button-next::after {
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+    @media only screen and (max-width: 768px){
+
+        .projectWrapper{
+            margin: 0;
+            transform: scale(80%);
+            
+        }
+      
+    }
+
+    /* Section two of projects page */
+    .futureWrapper{
+        width: auto;
+        height: auto;
+        display: flex;
+        margin-top: 5em;        
+        border-top: grey 0.2px solid;
+        flex-direction: column;
+        align-items: center;
+
+        .lrWrapper{
+            width: 96%;
+            height: 100%;
+            display: flex;
+            margin-top: 2em;
+
+            
+            .futureleft{
+                width: 100%;
+                height: 100%;
+                background: #9c9c9c;
+                border-radius: 12px;
+                margin: 0.5em;
+                transition: all 0.5s ease;
+                border: 2px solid;
+
+                &>h1{
+                    color: black;
+                }
+                &ul {
+                    padding-left: 25px;
+
+                }
+                &>ul, li{
+                    margin-bottom: 20px;
+                    list-style: square;
+                    font-size: 1.2em;
+                }
+
+            }
+            .futureright{
+                width: 100%;
+                height: 100%;
+                margin: 0.5em;
+                border-radius: 12px;
+                background: #262626;
+                transition: all 0.5s ease;
+                border: 2px solid;
+
+
+                &ul {
+                    
+                    padding-left: 25px;
+
+                }
+                &>ul, li{
+                    margin-bottom: 20px;
+                    color: whitesmoke;
+                    list-style: square;
+                    font-size: 1.2em;
+                }
+                
+            }
+
+            .futureleft:hover{
+                background-color: #262626;
+                &>h1{
+                    color: whitesmoke;
+                }
+                &>ul, li{
+                    color: whitesmoke;
+                }
+            }
+
+            .futureright:hover{
+                background-color: #9c9c9c;
+                &>h1{
+                    color: black;
+                }
+                &>ul, li{
+                    color: black;
+                }
+            }
+        }
+    }
+    h3{
+        margin-top: 7em;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .lrWrapper{
+        flex-wrap: wrap !important;
+    }
+}
